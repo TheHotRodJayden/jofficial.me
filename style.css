@@ -13,10 +13,10 @@ body {
   width: 25%;
 }
 .btn {
-background: none ;
-color: white;
-border: 2px solid rgb(255, 255, 255);
-position: absolute;
+	background: none ;
+	color: white;
+	border: 2px solid rgb(255, 255, 255);
+	position: right;
 }
 
 h1 {

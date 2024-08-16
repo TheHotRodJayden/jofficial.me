@@ -18,6 +18,7 @@ body {
 	border: 2px solid rgb(255, 255, 255);
 	position: absolute;
 	font-family: Arial, Helevetica, sans-serif;
+	text-decoration: none;
 }
 
 h1 {

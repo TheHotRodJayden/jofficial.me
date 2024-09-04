@@ -19,6 +19,7 @@ body {
 	position: absolute;
 	font-family: Arial, Helevetica, sans-serif;
 	text-decoration: none;
+	border-radius: 12px;
 }
 
 h1 {

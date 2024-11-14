@@ -15,7 +15,7 @@ body {
 }
 .btn {
 	background: none ;
-	color: black;
+	color: rgb(217, 255, 0);
 	border: 2px solid rgb(255, 255, 255);
 	font-family: Arial, Helevetica, sans-serif;
 	text-decoration: none;
@@ -26,6 +26,6 @@ body {
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  color: black;
+  color: rgb(172, 78, 78);
   text-align: center;
 }

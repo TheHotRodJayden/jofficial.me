@@ -18,3 +18,8 @@ html {
 h1 {
     color: red;
 }
+
+a {
+    color: cyan;
+    text-decoration: none;
+}

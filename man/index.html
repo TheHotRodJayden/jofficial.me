@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Tree. Nothing more.</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background-color: #000000;
+    }
+    #center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .man {
+      min-width: 320px;
+      max-width: 100%;
+      min-height: 320px;
+      max-height: 100%;
+      position: relative;
+      color: black;
+    }
+    .man img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      image-rendering: pixelated;
+    }
+  </style>
+</head>
+<body>
+  <div id="center">
+    <div class="man">
+      <img alt="Tree" src="/assets/images/tree.gif">
+    </div>
+  </div>
+  <audio id="man-audio" src="/assets/audio/man.mp3" loop></audio>
+  <script>
+    const audio = document.getElementById('man-audio');
+    audio.play().catch(() => {
+      const resume = () => {
+        audio.play();
+        document.removeEventListener('pointerdown', resume);
+        document.removeEventListener('keydown', resume);
+      };
+      document.addEventListener('pointerdown', resume);
+      document.addEventListener('keydown', resume);
+    });
+  </script>
+</body>
+</html>

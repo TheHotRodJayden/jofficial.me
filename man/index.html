@@ -39,17 +39,17 @@
       <img alt="Tree" src="/assets/images/tree.gif">
     </div>
   </div>
-  <audio id="man-audio" src="/assets/audio/man.mp3" loop></audio>
+  <audio id="man-audio" src="/assets/audio/man.mp3" loop playsinline preload="auto"></audio>
   <script>
     const audio = document.getElementById('man-audio');
+    const events = ['touchend', 'click', 'keydown'];
+    const resume = () => {
+      audio.play().then(() => {
+        events.forEach(e => document.removeEventListener(e, resume));
+      }).catch(() => {});
+    };
     audio.play().catch(() => {
-      const resume = () => {
-        audio.play();
-        document.removeEventListener('pointerdown', resume);
-        document.removeEventListener('keydown', resume);
-      };
-      document.addEventListener('pointerdown', resume);
-      document.addEventListener('keydown', resume);
+      events.forEach(e => document.addEventListener(e, resume));
     });
   </script>
 </body>
